@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import ContactInfo
+from django.contrib import messages
 
 
 def index(request):
@@ -13,6 +14,7 @@ def index(request):
             email=email,
             message=message
         )
+        messages.success(request, 'Thank you for reaching out, we will be in touch!')
         return redirect('home')
     return render(request, 'website/index.html')
 
