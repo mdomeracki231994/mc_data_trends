@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 if DEBUG_STRING == 'True':
-    DEBUG = False
+    DEBUG = True
 
 ALLOWED_HOSTS = []
 
