@@ -32,8 +32,13 @@ DEBUG = False
 if DEBUG_STRING == 'True':
     DEBUG = True
 
-ALLOWED_HOSTS = []
-
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = [
+        'https://www.mcdatatrends.com/',
+        'https://afternoon-tundra-17926-c55ee59853c8.herokuapp.com/'
+    ]
 
 # Application definition
 
