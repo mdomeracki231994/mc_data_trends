@@ -1,0 +1,1 @@
+web: gunicorn mc_data_trends.wsgi
