@@ -1,0 +1,117 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore the virtual environment directory
+venv/
+env/
+
+# Ignore the Django database file
+db.sqlite3
+
+# Ignore static files collected by Django
+/staticfiles/
+/static_collected/
+
+# Ignore media files uploaded by users
+/media/
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+.env.*.local.php
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.sln.docstates
+*.sln.ide-shm
+*.sln.ide-wal
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+
+# Ignore environment-specific files
+*.env
+*.env.local
+*.env.*.local
+*.env.*.local.php
+
+# Ignore dependencies and package managers
+/node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/.yarn/
+/.pnp/
+.pnp.js
+
+# Ignore build directories
+/dist/
+/build/
+/out/
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore compiled TypeScript files
+*.js
+*.js.map
+*.tsbuildinfo
+
+# Ignore compiled and minified CSS/JS files
+*.min.css
+*.min.js
+
+# Ignore compiled files and build artifacts for frontend frameworks (e.g., React, Vue)
+/node_modules/
+/build/
+/public/
+
+# Ignore editor-specific files
+*.sublime-workspace
+*.sublime-project
+*.vscode
+*.idea
+*.tmproj
+*.esproj
+*.vs
+
+# Ignore Django migration files if they are managed outside the app folder
+/migrations/
+
+# Ignore any local configuration files
+settings_local.py
+
+# Ignore secret and sensitive files
+*.pem
+*.key
+*.password
+*.secret
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled Java files
+bin/
+target/
+
+# Ignore compiled C/C++ files
+out/
+*.out
+
+# Ignore compiled Ruby files
+*.gem
+
+# Ignore database files
+*.db
+*.sqlite
+*.sqlite3
+*.mysql
+*.sql
