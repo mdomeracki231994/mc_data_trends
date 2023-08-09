@@ -36,7 +36,7 @@ if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
     ALLOWED_HOSTS = [
-        'https://www.mcdatatrends.com/',
+        'https://bluetreeconcepts.io/',
         'https://afternoon-tundra-17926-c55ee59853c8.herokuapp.com/'
     ]
 
