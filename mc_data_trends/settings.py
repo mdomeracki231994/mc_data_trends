@@ -28,9 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-if DEBUG_STRING == 'True':
-    DEBUG = True
+DEBUG = True
+
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
@@ -148,3 +147,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
+
+if os.getcwd() == '/app':
+    SECURE_PR = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+    DEBUG = False
