@@ -149,6 +149,4 @@ django_heroku.settings(locals())
 
 
 if os.getcwd() == '/app':
-    SECURE_PR = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
     DEBUG = False
