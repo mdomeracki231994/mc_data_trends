@@ -2,45 +2,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MC Data Trends</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Rubik:wght@400;500;700&family=Spartan:wght@400;700;900&display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/font-awesome/css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/glightbox/css/glightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/imagerevealhover/css/base.css' %}">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>CMS</title>
 </head>
 <body>
-{% if messages %}
-    <div class="mt-5 pt-4">
 
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="close-button" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        {% endfor %}
-    </div>
-
-{% endif %}
-{% include 'website/includes/nav.html' %}
 {% block content %}
-{% endblock %}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const closeButtonList = document.querySelectorAll('.close-button');
 
-        for (let i = 0; i < closeButtonList.length; i++) {
-            closeButtonList[i].addEventListener('click', function () {
-                const alertElement = this.closest('.alert');
-                if (alertElement) {
-                    alertElement.remove();
-                }
-            });
-        }
-    });
-</script>
-<script src="{% static 'js/bootstrap.js' %}"></script>
+{% endblock %}
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+
+<!-- Bootstrap JS -->
+<script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Vendors -->
+{#<script src="{% static 'vendor/glightbox/js/glightbox.js' %}"></script>#}
+{#<script src="{% static 'vendor/jarallax/jarallax.min.js' %}"></script>#}
+{#<script src="{% static 'vendor/imagerevealhover/js/demo.js' %}"></script>#}
+{#<script src="{% static 'vendor/imagerevealhover/js/TweenMax.min.js' %}"></script>#}
+
+<!-- Template Functions -->
+<script src="{% static 'js/functions.js' %}"></script>
 </body>
 </html>
