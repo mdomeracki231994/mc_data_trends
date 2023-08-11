@@ -169,4 +169,4 @@ django_heroku.settings(locals())
 
 
 if os.getcwd() == '/app':
-    DEBUG = False
+    DEBUG = True
