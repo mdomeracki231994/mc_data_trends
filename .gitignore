@@ -9,9 +9,7 @@ env/
 # Ignore the Django database file
 db.sqlite3
 
-# Ignore static files collected by Django
-/staticfiles/
-/static_collected/
+
 
 # Ignore media files uploaded by users
 /media/
