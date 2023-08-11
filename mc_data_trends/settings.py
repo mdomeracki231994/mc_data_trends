@@ -29,13 +29,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
     ALLOWED_HOSTS = [
+        'https://www.bluetreeconcepts.io/',
         'https://bluetreeconcepts.io/',
         'https://afternoon-tundra-17926-c55ee59853c8.herokuapp.com/'
     ]
@@ -168,5 +169,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
 
-if os.getcwd() == '/app':
-    DEBUG = True
+
