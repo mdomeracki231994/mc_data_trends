@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os.path
+import sys
+
 import django_heroku
 import dj_database_url
 from decouple import config
@@ -38,6 +40,24 @@ else:
         'https://bluetreeconcepts.io/',
         'https://afternoon-tundra-17926-c55ee59853c8.herokuapp.com/'
     ]
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'handlers': {
+            'console': {
+                'level': 'DEBUG',
+                'class': 'logging.StreamHandler',
+                'stream': sys.stdout,
+            },
+        },
+        'loggers': {
+            'django': {
+                'handlers': ['console'],
+                'level': 'DEBUG',
+                'propagate': True,
+            },
+        },
+    }
 
 # Application definition
 
