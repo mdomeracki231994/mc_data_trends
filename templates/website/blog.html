@@ -1,0 +1,250 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+
+<!-- =======================
+Inner intro START -->
+<section>
+	<div class="container">
+		<div class="row d-flex justify-content-lg-between">
+			<!-- Inner intro title -->
+			<div class="col-md-8 mx-auto text-center">
+				<h1 class="display-6">Blog Minimal</h1>
+				<p class="lead">Sharing thoughts, ideas, stories and news with everyone.</p>
+			</div>
+		</div> <!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Inner intro END -->
+
+<!-- =======================
+Blog START -->
+<section class="position-relative z-index-9 pt-0">
+	<div class="container">
+		<div class="row">
+
+			<!-- Card item image START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100 overflow-hidden">
+					<!-- Featured label-->
+					<span class="featured-label" title="Featured Blog"><i class="fas fa-star"></i></span>
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<img src="{% static 'images/blog/grid/01.jpg' %}" alt="blog image">
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex align-items-start flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Business</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>8 min read</span>
+							</div>
+							<h4><a href="#">Reliable sources to learn about folio</a></h4>
+							<p>He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item image END -->
+
+			<!-- Card item image START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100 overflow-hidden">
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<img src="{% static 'images/blog/grid/02.jpg' %}" alt="blog image">
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex align-items-start flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Start-up</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>6 min read</span>
+							</div>
+							<h4><a href="#">Never underestimate the influence of folio</a></h4>
+							<p>See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered Jennings</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item image END -->
+
+			<!-- Card item slider START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100">
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<div class="tiny-slider arrow-dark">
+							<div class="tiny-slider-inner" data-arrow="true" data-rewind="true" data-dots="false" data-items="1">
+								<div class="item"><img src="{% static 'images/blog/grid/03.jpg' %}" alt=""></div>
+								<div class="item"><img src="{% static 'images/blog/grid/04.jpg' %}" alt=""></div>
+							</div>
+						</div>
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Story</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>3 min read</span>
+							</div>
+							<h4><a href="#">Skills that you can learn from business</a></h4>
+							<p>Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item slider END -->
+
+			<!-- Card item vimeo video START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100">
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<div class="ratio ratio-16x9">
+							<iframe src="https://player.vimeo.com/video/167434033?title=0&byline=0&portrait=0" width="620" height="347"   allowfullscreen></iframe>
+						</div>
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Idea,</a>
+									<a href="#" class="me-2">Thought</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>2 min read</span>
+							</div>
+							<h4><a href="#">5 things you need to know about folio</a></h4>
+							<p>Returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child.</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item vimeo video END -->
+
+			<!-- Card item youtube video START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100">
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<div class="ratio ratio-16x9">
+							<iframe width="620" height="347" src="https://www.youtube.com/embed/9No-FiEInLA"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</div>
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Inside</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>6 min read</span>
+							</div>
+							<h4><a href="#">Never underestimate the influence of folio</a></h4>
+							<p>The bore of true of no be deal. Frequently sufficient to be unaffected. The furnished she concluded</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item youtube video END -->
+
+			<!-- Card item image START -->
+			<div class="col-md-10 col-lg-7 mx-auto mb-4">
+				<div class="card h-100 overflow-hidden">
+					<!-- Card image -->
+					<div class="card-img-top rounded overflow-hidden position-relative">
+						<img src="{% static 'images/blog/grid/04.jpg' %}" alt="blog image">
+					</div>
+					<!-- Card Body -->
+					<div class="card-body py-4 px-0 d-flex align-items-start flex-column">
+						<div class="mb-auto">
+							<div class="card-meta mb-3 d-flex align-items-center flex-row">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="me-2">Start-up</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>5 min read</span>
+							</div>
+							<h4><a href="#">The 3 greatest moments in folio history</a></h4>
+							<p>Perceived end knowledge certainly day sweetness why cordially. Ask a quick six seven offer see among</p>
+						</div>
+						<div class="mt-auto">
+							<a href="#" class="btn text-dark btn-sm btn-line">Continue Reading</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item image END -->
+
+		</div> <!-- Row END -->
+
+		<!-- Pagination START -->
+		<nav class="mt-7" aria-label="navigation">
+		  <ul class="pagination pagination-line d-inline-block d-sm-flex justify-content-center">
+		    <li class="page-item disabled">
+		      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+		    <li class="page-item disabled"><a class="page-link" href="#">..</a></li>
+		    <li class="page-item"><a class="page-link" href="#">15</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#">Next</a>
+		    </li>
+		  </ul>
+		</nav>
+		<!-- Pagination END -->
+	</div>
+</section>
+<!-- =======================
+Blog END -->
+
+</main>
+{% endblock %}

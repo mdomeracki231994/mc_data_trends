@@ -11,6 +11,10 @@ def services(request):
     return render(request, 'website/services.html')
 
 
+def blog(request):
+    return render(request, 'website/blog.html')
+
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
