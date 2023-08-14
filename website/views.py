@@ -7,6 +7,10 @@ def index(request):
     return render(request, 'website/index.html')
 
 
+def about(request):
+    return render(request, 'website/about.html')
+
+
 def services(request):
     return render(request, 'website/services.html')
 
