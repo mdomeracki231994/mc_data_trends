@@ -1,0 +1,141 @@
+{% load static %}
+<div class="preloader">
+        <img class="preloader-item" src="{% static 'images/loader/01.gif' %}" alt="Loading">
+    </div>
+    <!-- Offcanvas full reveal START -->
+    <div class="offcanvas offcanvas-top bg-dark" tabindex="-1" id="offcanvasFullReveal" data-bs-backdrop="false"
+         aria-labelledby="offcanvasFullReveal">
+        <div class="offcanvas-header position-absolute top-0 end-0 z-index-9">
+            <a class="ms-auto btn btn-primary btn-round zoom-hover" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fas fa-times p-0"></i>
+            </a>
+        </div>
+        <div class="offcanvas-body position-relative px-5 px-md-8 pt-3 pt-md-7">
+            <!-- Offcanvas inner START -->
+            <div class="w-100 h-100 d-flex align-items-start flex-column">
+                <!-- Offcanvas Menu START -->
+                <ul class="nav dropdown-toggle-start-icon flex-column">
+                    <!-- Nav item -->
+                    <li class="nav-item d-block d-md-flex mb-2 position-relative" data-fx="1">
+                        <a class="text-light-stroke text-primary-shadow h5 display-5"
+                           data-img="{% static 'images/about/01.jpg' %}" href="{% url 'website:home' %}">Home</a>
+                        <p class="align-self-center mt-0 mt-md-5 ms-3">— Where all started!</p>
+                        <!-- Offcanvas dropdown toggle START -->
+                        <button class="dropdown-toggle collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#home-dropdown-collapse" aria-expanded="false"
+                                aria-controls="home-dropdown-collapse"></button>
+                        <!-- Offcanvas dropdown toggle END -->
+                    </li>
+
+                    <!-- Nav item -->
+                    <li class="nav-item d-block d-md-flex mb-2" data-fx="1">
+                        <a class="text-light-stroke h5 display-5" href="{% url 'website:services' %}"
+                           data-img="{% static 'images/about/03.jpg' %}">Services</a>
+                        <p class="align-self-center mt-0 mt-md-5 ms-3">— With <i class="fas fa-heart"></i> and passion
+                        </p>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item d-block d-md-flex mb-2" data-fx="1">
+                        <a class="text-light-stroke h5 display-5" href="#"
+                           data-img="{% static 'images/about/04.jpg' %}">Our
+                            Blog</a>
+                        <p class="align-self-center mt-0 mt-md-5 ms-3">— What we're up to</p>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item d-block d-md-flex mb-2" data-fx="1">
+                        <a class="text-light-stroke h5 display-5" href="#"
+                           data-img="{% static 'images/about/05.jpg' %}">Open
+                            Jobs</a>
+                        <p class="align-self-center mt-0 mt-md-5 ms-3">— Join the crew</p>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item d-block d-md-flex mb-2" data-fx="1">
+                        <a class="text-light-stroke h5 display-5" href="{% url 'website:contact' %}"
+                           data-img="{% static 'images/about/06.jpg' %}">Contact
+                            Us</a>
+                        <p class="align-self-center mt-0 mt-md-5 ms-3">— Where to spot us</p>
+                    </li>
+                </ul>
+
+                <!-- Offcanvas Menu END -->
+                <!-- Offcanvas bottom START -->
+                <div class="mt-auto w-100 d-none d-lg-block py-4">
+                    <div class="d-flex justify-content-between w-100">
+                        <!-- Offcanvas bottom Left -->
+                        <ul class="list-inline mt-auto">
+                            <li class="list-inline-item me-2"><a class="list-group-item-action text-body" href="#">Privacy
+                                Policy</a></li>
+                            <li class="list-inline-item me-2"><a class="list-group-item-action text-body pe-0" href="#">Use
+                                of terms</a></li>
+                        </ul>
+                        <!-- Offcanvas bottom Right -->
+                        <div class="row d-flex">
+                            <div class="col-auto">
+                                <p class="mb-0">Folio Creative Agency</p>
+                            </div>
+                            <div class="col-auto">
+                                <p class="mb-0">1421 Coburn Hollow Road Metamora,<br> Near Center Point, IL 61548.</p>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#" class="mb-0 d-block">hello@folio.com</a>
+                                <a href="#">+(251) 854-6308</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Offcanvas bottom END -->
+            </div>
+            <!-- Offcanvas Right social START -->
+            <div class="position-absolute top-50 end-0 translate-middle-y z-index-9 ms-4 d-none d-lg-block">
+                <div class="list-group-inline list-unstyled rotate-90">
+                    <a href="#" class="list-group-item bg-transparent text-body mt-4">Facebook</a>
+                    <a href="#" class="list-group-item bg-transparent text-body mt-4">Twitter</a>
+                    <a href="#" class="list-group-item bg-transparent text-body mt-4">Dribble</a>
+                </div>
+            </div>
+            <!-- Offcanvas Right social END -->
+
+            <!-- Offcanvas inner END -->
+        </div>
+    </div>
+    <!-- Offcanvas full reveal END -->
+    <!-- Header START -->
+    <header class="navbar-light header-static navbar-sticky navbar-space-lg">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand">
+            <div class="container-fluid px-3 px-md-5">
+                <!-- Logo START -->
+                <a class="navbar-brand d-flex" href="index.html">
+                    <img class="navbar-brand-item" src="{% static 'images/logo.png' %}" alt="Logo">
+                    <h6 class="smaller text-muted mb-0 ms-2 d-none d-sm-block">Digital<br>Agency</h6>
+                </a>
+                <!-- Logo END -->
+
+                <!-- Nav Right START -->
+                <div class="nav flex-nowrap align-items-center">
+                    <!-- Nav Call -->
+                    <div class="nav-item d-none d-lg-flex">
+                        <div class="flex-row mb-n1">
+                            <span class="me-2 text-muted">Call us:</span>
+                            <a href="#" class="mb-0 h6">+(251) 854-6308</a>
+                        </div>
+                    </div>
+                    <!-- Offcanvas Opener -->
+                    <div class="nav-item ms-4">
+                        <a class="nav-link p-0 flex-row" data-bs-toggle="offcanvas" href="#offcanvasFullReveal"
+                           role="button" aria-controls="offcanvasFullReveal">
+                            <span class="font-heading fw-bold" data-bs-target="#offcanvasFullReveal">Menu</span>
+                            <i class="bi bi-text-right rtl-flip display-8 align-middle"
+                               data-bs-target="#offcanvasFullReveal"></i>
+                        </a>
+                    </div>
+                    <!-- Nav Button -->
+                    <div class="nav-item d-none d-md-block ms-4">
+                        <a class="btn btn-line btn-primary btn-sm mb-0" href="#">Get a Quote</a>
+                    </div>
+                </div>
+                <!-- Nav Right END -->
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>

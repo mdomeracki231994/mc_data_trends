@@ -1,0 +1,127 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+    <main>
+        <!-- =======================
+        Contact form and map START -->
+        <section class="p-0 pb-4 pb-md-0 bg-dark position-relative">
+            <div class="container">
+                <div class="row g-0 justify-content-lg-between">
+                    <div class="col-md-6 bg-dark-start z-index-m9 position-relative h-md-800 d-flex align-items-center z-index-9">
+                        <div class="position-relative py-5 pe-0 pe-md-6">
+                            <h1 class="text-white-stroke">Don't be shy, say hi!</h1>
+                            <h6 class="text-white">Have a question, a project? We'd love to discuss... </h6>
+                            <!-- Form START -->
+                            <form class="contact-form form-dark form-line mt-5" id="contact-form" name="contactform"
+                                  method="POST">
+                                {% csrf_token %}
+                                <!-- Main form -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- name -->
+                                        <div class="mb-3 position-relative">
+                                            <input required id="con-name" name="name" type="text" class="form-control"
+                                                   placeholder="Name">
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- email -->
+                                        <div class="mb-3 position-relative">
+                                            <input required id="con-email" name="email" type="email"
+                                                   class="form-control" placeholder="E-mail">
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- Subject -->
+                                        <div class="mb-3 position-relative">
+                                            <input required id="con-subject" name="subject" type="text"
+                                                   class="form-control" placeholder="Subject">
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- Message -->
+                                        <div class="mb-3 position-relative">
+                                            <textarea required id="con-message" name="message" cols="40" rows="6"
+                                                      class="form-control" placeholder="Message"></textarea>
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                    <!-- submit button -->
+                                    <div class="col-md-12 text-start">
+                                        <button class="btn btn-primary" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Form END -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-full-right">
+                        <!-- Google map -->
+                        <div class="position-md-absolute end-0 top-0 w-100 h-400 h-md-800 bg-dark">
+                            <iframe class="w-100 h-100 grayscale"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin"
+                                    style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div> <!-- Row END -->
+            </div>
+        </section>
+        <!-- =======================
+        Contact form and map END -->
+
+        <!-- =======================
+        Contact info START -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <!-- Call -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="d-flex flex-row align-items-center mb-3">
+					<span class="text-primary display-8 me-3">
+						<i class="bi bi-headset"></i>
+					</span>
+                            <h6 class="mt-2"><a href="#">+(251) 854-6308</a></h6>
+                        </div>
+                        <p>Call us on above number to get quick solution. Additional charges may apply</p>
+                    </div>
+                    <!-- Skype -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="d-flex flex-row align-items-center mb-3">
+					<span class="text-primary display-8 me-3">
+						<i class="bi bi-chat-left-text"></i>
+					</span>
+                            <h6 class="mt-2"><a href="#">Skype: HelloFolio</a></h6>
+                        </div>
+                        <p>If you have technical questions, chat live with developers in our Skype chat</p>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="d-flex flex-row align-items-center mb-3">
+					<span class="text-primary display-8 me-3">
+						<i class="bi bi-envelope"></i>
+					</span>
+                            <h6 class="mt-2"><a href="#">general@folio.com</a></h6>
+                        </div>
+                        <p>For general queries and questions including partnership opportunities</p>
+                    </div>
+                    <!-- Live chat -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="d-flex flex-row align-items-center mb-3">
+					<span class="text-primary display-8 me-3">
+						<i class="bi bi-person-plus"></i>
+					</span>
+                            <h6 class="mt-2"><a href="#">career@folio.com</a></h6>
+                        </div>
+                        <p>Careers & Press related queries please email us at above address</p>
+                    </div>
+                </div> <!-- Row END -->
+            </div>
+        </section>
+        <!-- =======================
+        Contact info END -->
+
+    </main>
+{% endblock %}
