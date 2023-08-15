@@ -27,7 +27,7 @@
   --bs-gray-700: #29292e;
   --bs-gray-800: #19191c;
   --bs-gray-900: #0f0f10;
-  --bs-primary: #ea110c;
+  --bs-primary: #0275d8;
   --bs-secondary: #d0d4d9;
   --bs-success: #28a745;
   --bs-info: #17a2b8;
@@ -35,7 +35,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f7f8f9;
   --bs-dark: #19191c;
-  --bs-primary-rgb: 234, 17, 12;
+  --bs-primary-rgb: 2, 117, 216;
   --bs-secondary-rgb: 208, 212, 217;
   --bs-success-rgb: 40, 167, 69;
   --bs-info-rgb: 23, 162, 184;
@@ -3747,19 +3747,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ea110c;
-  --bs-btn-border-color: #ea110c;
+  --bs-btn-bg: #0275d8;
+  --bs-btn-border-color: #0275d8;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #c70e0a;
-  --bs-btn-hover-border-color: #bb0e0a;
+  --bs-btn-hover-bg: #0275d8;
+  --bs-btn-hover-border-color: #0275d8;
   --bs-btn-focus-shadow-rgb: 237, 53, 48;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #bb0e0a;
-  --bs-btn-active-border-color: #b00d09;
+  --bs-btn-active-bg: #0275d8;
+  --bs-btn-active-border-color: #0275d8;
   --bs-btn-active-shadow: none;
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ea110c;
-  --bs-btn-disabled-border-color: #ea110c;
+  --bs-btn-disabled-bg: #0275d8;
+  --bs-btn-disabled-border-color: #0275d8;
 }
 
 .btn-secondary {
@@ -3882,19 +3882,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #ea110c;
-  --bs-btn-border-color: #ea110c;
+  --bs-btn-color: #0275d8;
+  --bs-btn-border-color: #0275d8;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ea110c;
-  --bs-btn-hover-border-color: #ea110c;
+  --bs-btn-hover-bg: #0275d8;
+  --bs-btn-hover-border-color: #0275d8;
   --bs-btn-focus-shadow-rgb: 234, 17, 12;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ea110c;
-  --bs-btn-active-border-color: #ea110c;
+  --bs-btn-active-bg: #0275d8;
+  --bs-btn-active-border-color: #0275d8;
   --bs-btn-active-shadow: none;
-  --bs-btn-disabled-color: #ea110c;
+  --bs-btn-disabled-color: #0275d8;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ea110c;
+  --bs-btn-disabled-border-color: #0275d8;
   --bs-gradient: none;
 }
 
@@ -19697,7 +19697,7 @@ a.text-light-stroke:hover {
 }
 
 .text-primary-shadow {
-  text-shadow: 0.03em 0.03em 0 #ea110c;
+  text-shadow: 0.03em 0.03em 0 #0275d8;
 }
 
 .text-dark-shadow {
