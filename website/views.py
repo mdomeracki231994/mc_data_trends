@@ -25,7 +25,12 @@ def contact(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        print(name, email, subject, message)
+        ContactInfo.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            message=message
+        )
         return redirect('website:thank-you')
 
     return render(request, 'website/contact.html')

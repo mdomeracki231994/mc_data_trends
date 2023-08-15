@@ -1,8 +1,7 @@
 {% extends 'website/base.html' %}
-
+{% load  static %}
 {% block content %}
     <main>
-
         <!-- =======================
         Inner intro START -->
         <section>
@@ -11,11 +10,16 @@
                     <!-- Inner intro title -->
                     <div class="col-xl-8">
                         <h1 class="display-4 text-primary">We're here to transform things.</h1>
-                        <p class="lead">Agency that cares <a href="#" class="text-dark"><u>about customers</u></a>. We
-                            deliver unique and measurable campaigns that connect with target audiences and encourage
-                            your business growth. We have built a <a href="#" class="text-dark"><u>robust team</u></a>
-                            which is capable of delivering <a href="#" class="text-dark"><u>best quality of services</u></a>
-                            when it comes to website design, Website development.</p>
+                        <p class="lead">Welcome to Blue Tree Concepts – a harmonious blend of software developers and
+                            full-service marketing aficionados who find inspiration in both the digital landscape and
+                            the great outdoors. Our journey is driven by a shared passion for innovative technology and
+                            the beauty of nature, resulting in a unique approach to crafting exceptional marketing
+                            solutions. As devoted software developers, we intricately weave cutting-edge techniques to
+                            build seamless digital experiences, while our love for the outdoors fuels our creativity and
+                            infuses each project with a breath of fresh air. From captivating web designs to strategic
+                            branding and resonant content marketing, we wholeheartedly commit to every facet of your
+                            brand. At Blue Tree Concepts, we intertwine the realms of technology and nature to transform
+                            your brand's vision into an awe-inspiring reality.</p>
                     </div>
                 </div> <!-- Row END -->
             </div>
@@ -29,7 +33,7 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-md-10 position-relative">
-                        <img class="w-100" src="assets/images/banner/02.jpg" alt="About image">
+                        <img class="w-100" src="{% static 'images/banner/02.jpg' %}" alt="About image">
                         <div class="position-absolute bottom-0 end-0 p-4 m-4 bg-white">
                             <h3><i class="bi bi-person-plus"></i> Early career</h3>
                             <a class="text-dark" href="#"><u>Take your first step to a career with us</u></a>
@@ -185,55 +189,7 @@
                 </div>
             </div>
         </section>
-        <!-- =======================
-        History END -->
 
-        <!-- =======================
-        Info boxes START -->
-        <section class="pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h3 class="mb-5">Outreach by the Numbers:</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Info box item -->
-                    <div class="col-sm-6 col-md-3 mb-4">
-                        <div class="h-100 bg-dark p-4 text-center">
-                            <i class="bi bi-people display-5 opacity-7 text-primary"></i>
-                            <h3 class="text-white">200+</h3>
-                            <p>Developers, designers and marketing experts</p>
-                        </div>
-                    </div>
-                    <!-- Info box item -->
-                    <div class="col-sm-6 col-md-3 mb-4">
-                        <div class="h-100 bg-light p-4 text-center">
-                            <i class="bi-patch-check display-5 opacity-5 text-primary"></i>
-                            <h3>80+</h3>
-                            <p>Magento certified developers</p>
-                        </div>
-                    </div>
-                    <!-- Info box item -->
-                    <div class="col-sm-6 col-md-3 mb-4">
-                        <div class="h-100 bg-primary p-4 text-center">
-                            <i class="bi bi-award display-5 opacity-7 text-dark"></i>
-                            <h3 class="text-white">91%</h3>
-                            <p class="text-white">Of certified IT professionals</p>
-                        </div>
-                    </div>
-                    <!-- Info box item -->
-                    <div class="col-sm-6 col-md-3 mb-4">
-                        <div class="h-100 bg-white border p-4 text-center">
-                            <i class="bi bi-cash-stack display-5 opacity-5 text-primary"></i>
-                            <h3>18M</h3>
-                            <p>Revenue generate in 2 years</p>
-                        </div>
-                    </div>
-                </div><!-- row END -->
-            </div>
-        </section>
-        <!-- =======================
-        Info boxes END -->
+
     </main>
 {% endblock %}
