@@ -7,7 +7,8 @@
         <section class="position-relative pb-0 mt-5 mt-md-7">
             <div class="d-flex justify-content-between">
                 <div>
-                    <h1 style="color:#007FFF" class="display-4 display-md-3 display-lg-1 position-absolute bottom-0 start-0 zoom-3 ms-5 ms-md-9 mb-n2 mb-sm-n3 mb-lg-n5">
+                    <h1 style="color:#007FFF"
+                        class="display-4 display-md-3 display-lg-1 position-absolute bottom-0 start-0 zoom-3 ms-5 ms-md-9 mb-n2 mb-sm-n3 mb-lg-n5">
                         Hello—</h1>
                 </div>
                 <!-- Top social -->
@@ -66,23 +67,22 @@
                 <div class="row">
                     <div class="col-lg-10">
                         <!-- Welcome text -->
-                        <div class="h2 display-6 text-white mb-6" data-fx="1">Welcome to our world. We're Blue Tree Concepts, <a
-                                href="#!" class="text-white-stroke" data-img="{% static 'images/about/04.jpg' %}">a creative
-                            digital agency<sup class="fas fa-link display-9"></sup>.</a> We offer various types of <a
-                                href="#!" class="text-white-stroke" data-img="{% static 'images/about/05.jpg' %}">digital
-                            services<sup class="fas fa-link display-9"></sup>.</a></div>
-                        <!-- Our team text -->
-                        <div class="h2 display-6 text-white mb-6" data-fx="1">We help <a href="#!"
-                                                                                         class="text-white-stroke"
-                                                                                         data-img="{% static 'images/about/13.jpg' %}">our
-                            clients<sup class="fas fa-link display-9"></sup></a> start, sustain, and grow their
-                            business.
-                        </div>
+                        <div class="h2 display-6 text-white mb-6" data-fx="1">Welcome to our world. We're Blue Tree
+                            Concepts, <a
+                                    href="{% url 'website:about' %}" class="text-white-stroke"
+                                    data-img="{% static 'images/about/04.jpg' %}">a creative
+                                digital agency<sup class="fas fa-link display-9"></sup>.</a> We offer various types of
+                            <a
+                                    href="{% url 'website:services' %}" class="text-white-stroke"
+                                    data-img="{% static 'images/about/05.jpg' %}">digital
+                                services<sup class="fas fa-link display-9"></sup>.</a></div>
+
                         <!-- Contact text -->
                         <div class="h2 display-6 text-white mb-6" data-fx="1">Whether you’ve got a quick concern or want
-                            to run through the details of your next big project, we can help. <a href="#!"
-                                                                                                 class="text-white-stroke"
-                                                                                                 data-img="{% static 'images/about/11.jpg' %}">Let's
+                            to run through the details of your next big project, we can help. <a
+                                    href="{% url 'website:contact' %}"
+                                    class="text-white-stroke"
+                                    data-img="{% static 'images/about/11.jpg' %}">Let's
                                 chat now.<sup class="fas fa-link display-9"></sup></a></div>
                     </div>
                 </div>
@@ -93,9 +93,9 @@
                 <!-- About us -->
                 <div class="row d-flex justify-content-md-between">
                     <div class="col-md-7 col-lg-7">
-                        <span class="font-alt fw-normal display-8 d-block mb-3">We are creating smart websites.</span>
-                        <h2 class="display-8">Many folks can make it to the finish line, but the Folio is the way
-                            special. Want to build something now that lasts? We're here.</h2>
+                        <span class="font-alt fw-normal display-8 d-block mb-3">We specialize in crafting intelligent websites..</span>
+                        <h2 class="display-8">While many can reach the end, Blue Tree Concepts stands out as the truly
+                            exceptional path. Looking to construct something enduring right now? Count on us.</h2>
                     </div>
                     <div class="col-md-5 col-lg-4">
                         <img class="rounded" src="{% static 'images/about/06.jpg' %}" alt="">
@@ -109,63 +109,20 @@
                     <div class="col-md-7 col-lg-5">
                         <p class="mt-5">We ❤️ to achieve the goal as we provide innovative ideas, designs, and
                             multimedia solutions to our clients. We help our customers better manage their web presence
-                            in order to achieve greater. Partnering with 500+ Fortune companies and mid-sized firms
-                            across enterprises, uniquely customized and scalable workforce solutions. </p>
-                        <a href="#" class="btn btn-line text-dark">Explore more</a>
+                            in order to achieve greater.</p>
+                        <a href="{% url 'website:services' %}" class="btn btn-line text-dark">Explore more</a>
                     </div>
                 </div>
                 <!-- Our mission & vision -->
                 <div class="row d-flex justify-content-md-between">
                     <div class="col-md-7">
                         <h2 class="mt-5 mt-lg-8">Our mission & vision</h2>
-                        <p class="lead">We are an insight and behavior-driven creative marketing agency. A Full package
-                            Digital Creative Agency Specializing in: Video Production, Web Design, Branding, Brand
-                            Strategy, Content Marketing and Aerial Cinematography.</p>
-                        <a href="#" class="btn btn-line text-dark">Explore more</a>
-                        <div class="row mt-5">
-                            <!-- Box 1 -->
-                            <div class="col-12 col-md-4 mb-2">
-                                <div class="bg-light p-4 text-center h-100">
-                                    <img class="px-lg-4" src="{% static 'images/clients/google.svg' %}" alt="">
-                                    <div class="small my-2">Google rating</div>
-                                    <ul class="list-unstyled d-flex justify-content-center">
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star-half-alt text-warning me-1"></i></li>
-                                        <li><i class="far fa-star text-warning"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Box 1 -->
-                            <div class="col-12 col-md-4 mb-2">
-                                <div class="bg-light p-4 text-center h-100">
-                                    <img class="px-lg-4" src="{% static 'images/clients/clutch.svg' %}" alt="">
-                                    <div class="small my-2">Top rated</div>
-                                    <ul class="list-unstyled d-flex justify-content-center">
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Box 1 -->
-                            <div class="col-12 col-md-4 mb-2">
-                                <div class="bg-light p-4 text-center h-100">
-                                    <img class="px-lg-4" src="{% static 'images/clients/freelancer.svg' %}" alt="">
-                                    <div class="small my-2">100+ Feedbacks</div>
-                                    <ul class="list-unstyled d-flex justify-content-center">
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star text-warning me-1"></i></li>
-                                        <li><i class="fas fa-star-half-alt text-warning"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="lead">We are an IT-centered creative marketing agency, driven by insights and
+                            behaviors. Our all-encompassing digital creative solutions include Web Design, Branding,
+                            Brand Strategy, Content Marketing, and E-commerce expertise. With a focus on leveraging
+                            technology, we bring your brand's vision to life and optimize your online presence for
+                            success.</p>
+                        <a href="{% url 'website:about' %}" class="btn btn-line text-dark">Explore more</a>
                     </div>
                     <div class="col-md-5">
                         <img class="rounded mt-5 mt-lg-n5" src="{% static 'images/about/07.jpg' %}" alt="">

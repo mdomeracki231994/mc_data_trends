@@ -33,3 +33,6 @@ def contact(request):
 
 def thankyou_page(request):
     return render(request, 'website/thank-you.html')
+
+
+def news_letter(request):
