@@ -22,13 +22,16 @@
                     <div class="col-6">
                         <ul class="nav flex-column text-primary-hover">
                             <li class="nav-item"><a class="nav-link" href="{% url 'website:home' %}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'website:services' %}">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'website:services' %}">Services</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="nav flex-column text-primary-hover">
-                            <li class="nav-item"><a class="nav-link pt-0" href="{% url 'website:about' %}">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'website:contact' %}">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link pt-0" href="{% url 'website:about' %}">About</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'website:contact' %}">Contact Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -37,10 +40,11 @@
             <!-- Footer Widget 4 -->
             <div class="col-md-6 col-lg-4 mb-5">
                 <h5 class="mb-4 text-white">Stay in touch</h5>
-                <form>
+                <form method="post" action="{% url  'website:newsletter' %}">
+                    {% csrf_token %}
                     <label class="form-label">Subscribe to our newsletter to receive exclusive offers.</label>
                     <div class="mb-3">
-                        <input class="form-control" type="email" placeholder="Enter email...">
+                        <input name="email" class="form-control" type="email" placeholder="Enter email...">
                     </div>
                     <div class="mb-3">
                         <button type="submit" value="Subscribe" class="btn btn-primary mb-0">Join us</button>
@@ -55,7 +59,8 @@
         <!-- Footer copyright START -->
         <div class="row align-items-center justify-content-md-between py-4">
             <div class="col-md-12">
-                <div class="text-center text-md-start">©2023 <a href="https://www.bluetreeconcepts.io/" target="_blank">Blue Tree Concepts</a>.
+                <div class="text-center text-md-start">©2023 <a href="https://www.bluetreeconcepts.io/" target="_blank">Blue
+                    Tree Concepts</a>.
                     All rights reserved
                 </div>
             </div>

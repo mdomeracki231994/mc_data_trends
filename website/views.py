@@ -36,3 +36,9 @@ def thankyou_page(request):
 
 
 def news_letter(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        print(email)
+        return redirect('website:thank-you')
+    else:
+        pass
