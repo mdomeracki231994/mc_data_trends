@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <form method="POST" class="w-50">
+                            {% csrf_token %}
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="mb-4">
+                                <label for="business_name" class="form-label">Business Name</label>
+                                <input type="text" class="form-control" id="business_name" name="business_name">
+                            </div>
+                            <div class="mb-4">
+                                {% for question in questions %}
+                                    <label for="questions">{{ question.text }}</label>
+                                    <select name="question_{{ question.id }}" id="questions" class="form-select">
+                                        {% for choice in question.choice_set.all %}
+                                            <option value="{{ choice.id }}">{{ choice.text }}</option>
+                                        {% endfor %}
+                                    </select>
+                                {% endfor %}
+                            </div>
+                        <input class="btn btn-primary" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
