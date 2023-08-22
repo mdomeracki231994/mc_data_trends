@@ -20,7 +20,7 @@ class Question(models.Model):
     question = models.CharField(max_length=255)
 
     def __str__(self):
-        self.question
+        return self.question
 
 
 class Response(models.Model):
