@@ -35,5 +35,5 @@ class Response(models.Model):
     phone_number = models.CharField(max_length=50)
     business = models.CharField(max_length=255)
     survey = models.ForeignKey(Survey, on_delete=models.CASCADE)
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    selected_choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
+    question = models.ManyToManyField(Question)
+    selected_choice = models.ManyToManyField(Choice)
