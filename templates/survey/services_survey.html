@@ -26,15 +26,25 @@
                             </div>
                             <div class="mb-4">
                                 {% for question in questions %}
-                                    <label for="questions">{{ question.text }}</label>
-                                    <select name="question_{{ question.id }}" id="questions" class="form-select">
+                                    {% if question.is_radio == True %}
+                                        <p>{{ question.text }}</p>
                                         {% for choice in question.choice_set.all %}
-                                            <option value="{{ choice.id }}">{{ choice.text }}</option>
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="checkboxes">{{ choice.text }}</label>
+                                                <input id="checkboxes" class="form-check-input" type="checkbox" value="{{ choice.text }}">
+                                            </div>
                                         {% endfor %}
-                                    </select>
+                                    {% else %}
+                                        <label for="questions">{{ question.text }}</label>
+                                        <select name="question_{{ question.id }}" id="questions" class="form-select">
+                                            {% for choice in question.choice_set.all %}
+                                                <option value="{{ choice.id }}">{{ choice.text }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
-                        <input class="btn btn-primary" type="submit">
+                            <input class="btn btn-primary" type="submit">
                         </form>
                     </div>
                 </div>

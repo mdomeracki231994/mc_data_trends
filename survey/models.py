@@ -12,6 +12,7 @@ class Survey(models.Model):
 class Question(models.Model):
     survey = models.ForeignKey(Survey, on_delete=models.CASCADE)
     text = models.TextField()
+    is_radio = models.BooleanField(default=False)
 
     def __str__(self):
         return self.text
