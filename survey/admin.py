@@ -4,4 +4,5 @@ from .models import *
 admin.site.register(Survey)
 admin.site.register(Question)
 admin.site.register(Response)
+admin.site.register(Answer)
 
