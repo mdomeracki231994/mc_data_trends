@@ -1,0 +1,73 @@
+{% extends 'cms/base.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="container mt-4">
+                <h2>Add Sales Lead</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="company_name" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="company_name" name="company_name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="company_address_line_1" class="form-label">Company Address Line 1</label>
+                        <input type="text" class="form-control" id="company_address_line_1"
+                               name="company_address_line_1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="company_address_line_2" class="form-label">Company Address Line 2</label>
+                        <input type="text" class="form-control" id="company_address_line_2"
+                               name="company_address_line_2">
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="company_city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="company_city" name="company_city">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="company_state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="company_state" name="company_state">
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="company_zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="company_zip" name="company_zip">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customer_type" class="form-label">Customer Type</label>
+                        <input type="text" class="form-control" id="customer_type" name="customer_type">
+                    </div>
+                    <div class="mb-3">
+                        <label for="source_of_lead" class="form-label">Source of Lead</label>
+                        <input type="text" class="form-control" id="source_of_lead" name="source_of_lead">
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}
