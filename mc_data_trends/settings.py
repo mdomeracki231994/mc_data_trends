@@ -63,7 +63,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'survey',
-    'cms',
 ]
 
 MIDDLEWARE = [
