@@ -1,0 +1,167 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="container-fluid">
+                <div class="row p-3">
+                    <div class="col-12 d-flex flex-column justify-content-center">
+                        <h4 class="text-center">World Sales</h4>
+                        <canvas id="world_sales"></canvas>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-4 d-flex flex-column">
+                        <h4 class="text-center">USA Sales Break down</h4>
+                        <canvas id="usa_breakdown"></canvas>
+                    </div>
+                    <div class="col-4 d-flex flex-column">
+                        <h4 class="text-center">Spain Sales Break down</h4>
+                        <canvas id="spain_breakdown"></canvas>
+                    </div>
+                    <div class="col-4 d-flex flex-column">
+                        <h4 class="text-center">France Sales Break down</h4>
+                        <canvas id="france_breakdown"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const world_sales = document.getElementById('world_sales');
+        new Chart(world_sales, {
+            type: 'bar',
+            data: {
+                labels: {{ world_sales_labels|safe }},
+                datasets: [{
+                    data: {{ world_sales_data|safe }},
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const Usa_Sales_Break_Down = document.getElementById('usa_breakdown')
+        new Chart(Usa_Sales_Break_Down, {
+            type: 'pie',
+            data: {
+                labels: {{ usa_breakdown_labels|safe }},
+                datasets: [
+                    {
+                        data: {{ usa_breakdown_data|safe }},
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(100, 205, 86)'
+                        ],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(2);
+                                return `${label}: ${percentage}%`;
+                            },
+                        },
+                    },
+                },
+            },
+        })
+
+        const spain_breakdown = document.getElementById('spain_breakdown');
+        new Chart(spain_breakdown, {
+            type: 'pie',
+            data: {
+                labels: {{ spain_breakdown_labels|safe }},
+                datasets: [
+                    {
+                        data: {{ spain_breakdown_data|safe }},
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(100, 205, 86)'
+                        ],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(2);
+                                return `${label}: ${percentage}%`;
+                            },
+                        },
+                    },
+                },
+            },
+        })
+
+        const france_breakdown = document.getElementById('france_breakdown');
+        new Chart(france_breakdown, {
+            type: 'pie',
+            data: {
+                labels: {{ france_breakdown_labels|safe }},
+                datasets: [
+                    {
+                        data: {{ france_breakdown_data|safe }},
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(100, 205, 86)',
+                            'rgb(150, 205, 86)'
+                        ],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(2);
+                                return `${label}: ${percentage}%`;
+                            },
+                        },
+                    },
+                },
+            },
+        })
+
+
+
+
+    </script>
+{% endblock %}
+
+

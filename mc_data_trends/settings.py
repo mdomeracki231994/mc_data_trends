@@ -63,6 +63,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'survey',
+    'cms',
+    'demo_data_science',
+    'rest_framework',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -73,7 +78,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'mc_data_trends.urls'
@@ -81,7 +87,10 @@ ROOT_URLCONF = 'mc_data_trends.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [
+            BASE_DIR / 'templates',
+            os.path.join(BASE_DIR, 'cms-front-end/build')
+            ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -150,7 +159,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'cms-front-end/build/static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -162,5 +172,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
